@@ -4,8 +4,8 @@ import src.interfaces.IInteres;
 import src.interfaces.IRetirable;
 
 class CuentaAhorros extends Cuenta implements IRetirable, IInteres {
-    public CuentaAhorros(String numero, double saldo) {
-        super(numero, saldo);
+    public CuentaAhorros(Cliente cliente,  String numero, double saldo) {
+        super(cliente, numero, saldo);
     }
 
     @Override
@@ -15,6 +15,6 @@ class CuentaAhorros extends Cuenta implements IRetirable, IInteres {
 
     @Override
     public void aplicarInteres() {
-        saldo += saldo * 0.01;
+        saldo += saldo * 0.03;
     }
 }
